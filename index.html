@@ -6,7 +6,9 @@
 
   <style>
     body {
-      background-color:black;
+      background-color: black;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
 
     h1 {
@@ -30,11 +32,40 @@
       background-color: red;
       color:yellow;
       font-family: fantasy;
+      font-size: larger;
     }
 
     .button:hover {
       background-color: orange;
     }
+
+    #access-form {
+      margin: auto;
+      height: fit-content;
+    } 
+
+    #code-input {
+      background-color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .button1 {
+      margin: auto;
+      display: block;
+      width: 25%;
+      height: 10%;
+      background-color: blue;
+      color:yellow;
+      font-family: fantasy;
+      font-size: larger;
+    }
+
+    .button1:hover {
+      background-color: darkblue;
+    }
+  
 
   </style>
 
@@ -43,8 +74,24 @@
       <h1>Secure the Vault</h1>
     </header>
       <img src="vault.png" alt="A Huge Vault" class="center">
+
+      <section>
+      <button type="buttom" class="button"  alt="A Huge Vault" onclick="alert(`${string}${variable1} ${variable2} ${variable3}`);" >Get Code</buttom><br/><br/>
+      </section>
+
+        <section id="access-form">
       
-      <button type="buttom" class="button" alt="A Huge Vault" onclick="alert(`${string}${variable1} ${variable2} ${variable3}`);" >Click to Open</buttom>
+          <h1>Enter the Secret Code to Open the Vault</h1>
+          <input type="text" id="code-input" placeholder="Enter code">
+          
+          
+          <button class="button1" onclick="checkCode()">Submit</button>
+          <p id="message"></p>
+          
+        </section>
+      
   </body>
+
+   
 
 </html>
